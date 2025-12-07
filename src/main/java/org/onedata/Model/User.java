@@ -1,5 +1,8 @@
 package org.onedata.Model;
 
+/**
+ * User Object
+ */
 public class User
 {
     private final long id;
@@ -20,10 +23,13 @@ public class User
         this.email = email;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     public String getName() {
         return name;
     }
 
 }
 
-// user object
