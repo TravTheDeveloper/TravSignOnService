@@ -1,1 +1,1 @@
-rootProject.name = "OneData"
+rootProject.name = "TravSignOnService"
