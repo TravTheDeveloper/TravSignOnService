@@ -1,4 +1,4 @@
-package org.onedata.Exceptions;
+package org.onedata.TravSignOnService.Exceptions;
 
 /**
  * Exception thrown for User not found

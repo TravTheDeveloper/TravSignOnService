@@ -1,10 +1,10 @@
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.onedata.Exceptions.UserExistException;
-import org.onedata.Exceptions.UserNotFoundException;
-import org.onedata.Model.User;
-import org.onedata.Repository.UserRepository;
-import org.onedata.Service.UserService;
+import org.onedata.TravSignOnService.Exceptions.UserExistException;
+import org.onedata.TravSignOnService.Exceptions.UserNotFoundException;
+import org.onedata.TravSignOnService.Model.User;
+import org.onedata.TravSignOnService.Repository.UserRepository;
+import org.onedata.TravSignOnService.Service.UserService;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;

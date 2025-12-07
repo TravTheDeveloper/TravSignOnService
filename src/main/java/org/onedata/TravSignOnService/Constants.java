@@ -1,4 +1,4 @@
-package org.onedata;
+package org.onedata.TravSignOnService;
 
 public class Constants {
     // Exceptions

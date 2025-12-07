@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.onedata.Model.User;
-import org.onedata.Repository.UserRepository;
+import org.onedata.TravSignOnService.Model.User;
+import org.onedata.TravSignOnService.Repository.UserRepository;
 
 import java.util.Arrays;
 import java.util.List;
