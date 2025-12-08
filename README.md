@@ -26,4 +26,13 @@ POST http://localhost:8080/users *(create user)*
 GET http://localhost:8080/users/id *(get user by id)*  
 PUT http://localhost:8080/users/id *(update user email)*  
 DELETE http://localhost:8080/users/id *(delete user)*  
+
+Example Request Body for POST
+```json
+{
+    "name": "Travis123Smith",
+    "email": "travissmith@aol.com",
+}
+
+```
  
