@@ -1,9 +1,9 @@
-package org.onedata.TravSignOnService.Service;
+package org.onedata.TravSignOnService.service;
 
-import org.onedata.TravSignOnService.Exceptions.UserExistException;
-import org.onedata.TravSignOnService.Exceptions.UserNotFoundException;
-import org.onedata.TravSignOnService.Model.User;
-import org.onedata.TravSignOnService.Repository.UserRepository;
+import org.onedata.TravSignOnService.exceptions.UserExistException;
+import org.onedata.TravSignOnService.exceptions.UserNotFoundException;
+import org.onedata.TravSignOnService.model.User;
+import org.onedata.TravSignOnService.repository.UserRepository;
 
 import java.util.UUID;
 

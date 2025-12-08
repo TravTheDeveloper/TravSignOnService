@@ -8,10 +8,10 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.ext.web.handler.BodyHandler;
-import org.onedata.TravSignOnService.Exceptions.UserExistException;
-import org.onedata.TravSignOnService.Exceptions.UserNotFoundException;
-import org.onedata.TravSignOnService.Model.User;
-import org.onedata.TravSignOnService.Service.UserService;
+import org.onedata.TravSignOnService.exceptions.UserExistException;
+import org.onedata.TravSignOnService.exceptions.UserNotFoundException;
+import org.onedata.TravSignOnService.model.User;
+import org.onedata.TravSignOnService.service.UserService;
 
 import static org.onedata.TravSignOnService.Constants.EMAIL_REGEX;
 

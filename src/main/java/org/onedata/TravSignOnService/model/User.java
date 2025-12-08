@@ -1,4 +1,4 @@
-package org.onedata.TravSignOnService.Model;
+package org.onedata.TravSignOnService.model;
 
 /**
  * User Object

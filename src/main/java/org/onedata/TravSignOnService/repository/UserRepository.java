@@ -1,6 +1,6 @@
-package org.onedata.TravSignOnService.Repository;
+package org.onedata.TravSignOnService.repository;
 
-import org.onedata.TravSignOnService.Model.User;
+import org.onedata.TravSignOnService.model.User;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 

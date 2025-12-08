@@ -1,8 +1,8 @@
 package org.onedata.TravSignOnService;
 
 import io.vertx.core.Vertx;
-import org.onedata.TravSignOnService.Repository.UserRepository;
-import org.onedata.TravSignOnService.Service.UserService;
+import org.onedata.TravSignOnService.repository.UserRepository;
+import org.onedata.TravSignOnService.service.UserService;
 
 public class Main {
 
