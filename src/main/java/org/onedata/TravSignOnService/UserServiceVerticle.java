@@ -36,7 +36,7 @@ public class UserServiceVerticle extends AbstractVerticle {
 
         router.post("/users").handler(this::createUserHandler);
         router.get("/users/:id").handler(this::findUserHandler);
-        router.put("/users/:id/email").handler(this::updateUserHandler);
+        router.put("/users/:id").handler(this::updateUserHandler);
         router.delete("/users/:id").handler(this::deleteUserHandler);
 
         vertx.createHttpServer().requestHandler(router).listen(8080);
@@ -52,14 +52,16 @@ public class UserServiceVerticle extends AbstractVerticle {
 
         try {
             final JsonObject userInfo = ctx.body().asJsonObject();
-            if (userInfo == null || !userInfo.containsKey("name") || !userInfo.containsKey("email")) {
+            if (userInfo == null || !userInfo.containsKey("name") || userInfo.getString("name").isEmpty()
+                    || !userInfo.containsKey("email")) {
                 ctx.response().setStatusCode(400).end("Missing required fields: Name and/or Email");
                 return;
             } else if (!userInfo.getString("email").matches(EMAIL_REGEX)) {
                 ctx.response().setStatusCode(400).end("Invalid email format");
                 return;
             }
-            User user = userService.createUser(userInfo.getString("name"), userInfo.getString("email"));
+            User user = userService.createUser(userInfo.getString("name"),
+                    userInfo.getString("email").toLowerCase());
             ctx.response()
                     .setStatusCode(200)
                     .putHeader("content-type", "application/json; charset=utf-8")
@@ -118,7 +120,7 @@ public class UserServiceVerticle extends AbstractVerticle {
                 ctx.response().setStatusCode(400).end("Invalid email format");
                 return;
             }
-            User user = userService.updateUser(id, userInfo.getString("email"));
+            User user = userService.updateUser(id, userInfo.getString("email").toLowerCase());
             ctx.response()
                     .setStatusCode(200)
                     .putHeader("content-type", "application/json; charset=utf-8")

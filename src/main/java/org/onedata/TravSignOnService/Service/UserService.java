@@ -40,7 +40,7 @@ public class UserService {
         if (usernameExists) { // thread safe check in case multiple concurrent calls to the resource
             throw new UserExistException(USER_EXISTS); // custom exception thrown
         }
-        long userID = UUID.randomUUID().getMostSignificantBits(); // random generated user iD
+        long userID = UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE; // random generated user iD
         return userRepository.storeUser(userID, new User(userID, name, email));
 
     }
